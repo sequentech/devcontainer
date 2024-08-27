@@ -1,0 +1,17 @@
+# SPDX-FileCopyrightText: 2023-2024 Eduardo Robles <edu@sequentech.io>
+#
+# SPDX-License-Identifier: AGPL-3.0-only
+
+version: "3.6"
+services:
+  devcontainer:
+    profiles: ["full", "base"]
+    image: ghcr.io/cachix/devenv:latest
+    container_name: devcontainer
+    volumes:
+      - ../..:/workspaces:cached
+    # support ptrace-based debuggers like C++, Go, and Rust
+    cap_add:
+     - SYS_PTRACE
+    security_opt:
+      - label:disable
