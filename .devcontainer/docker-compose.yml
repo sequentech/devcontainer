@@ -5,7 +5,7 @@
 version: "3.6"
 services:
   devcontainer-test:
-    profiles: ["full", "base"]
+    #profiles: ["full", "base"]
     image: ghcr.io/cachix/devenv:latest
     container_name: devcontainer-test
     volumes:
