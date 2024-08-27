@@ -6,4 +6,3 @@ source .devcontainer/.env
 pushd packages/step-cli
 cargo build --release
 popd
-source .devcontainer/scripts/config-cli.sh
