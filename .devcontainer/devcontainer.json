@@ -4,7 +4,7 @@
 {
 	"name": "step",
 	"dockerComposeFile": "docker-compose.yml",
-	"service": "devcontainer",
+	"service": "devcontainer-test",
 	"forwardPorts": [
 		9002,
 		9001,
@@ -37,8 +37,8 @@
 	"workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
 	"userEnvProbe": "loginShell",
 	"updateRemoteUserUID": false,
-	"onCreateCommand": "git config --global --add safe.directory '*' && direnv allow . && OUTPUT=$(cat .devcontainer/scripts/vscode-settings.sh) && devenv shell bash -- -c \"$OUTPUT\"",
-	"postCreateCommand": "git config --global --add safe.directory '*' && direnv allow . && OUTPUT=$(cat .devcontainer/scripts/init-cli.sh) && devenv shell bash -- -c \"$OUTPUT\"",
+	//"onCreateCommand": "git config --global --add safe.directory '*' && direnv allow . && OUTPUT=$(cat .devcontainer/scripts/vscode-settings.sh) && devenv shell bash -- -c \"$OUTPUT\"",
+	//"postCreateCommand": "git config --global --add safe.directory '*' && direnv allow . && OUTPUT=$(cat .devcontainer/scripts/init-cli.sh) && devenv shell bash -- -c \"$OUTPUT\"",
 	// Adding host requirements so that there is no need to manually select the
 	// machine to run on all the time
 	"hostRequirements": {
@@ -90,8 +90,8 @@
 				"george-alisson.html-preview-vscode"
 			]
 		},
-		"devpod": {
-			"prebuildRepository": "ghcr.io/sequentech/step"
-		}
+		//"devpod": {
+		//	"prebuildRepository": "ghcr.io/sequentech/step"
+		//}
 	}
 }

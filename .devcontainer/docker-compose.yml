@@ -4,10 +4,10 @@
 
 version: "3.6"
 services:
-  devcontainer:
+  devcontainer-test:
     profiles: ["full", "base"]
     image: ghcr.io/cachix/devenv:latest
-    container_name: devcontainer
+    container_name: devcontainer-test
     volumes:
       - ../..:/workspaces:cached
     # support ptrace-based debuggers like C++, Go, and Rust
